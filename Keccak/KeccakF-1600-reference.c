@@ -13,7 +13,7 @@ http://creativecommons.org/publicdomain/zero/1.0/
 
 #include <stdio.h>
 #include <string.h>
-#include "brg_endian.h"
+#include "endianness.h"
 #include "KeccakF-1600-interface.h"
 
 typedef unsigned char UINT8;
@@ -33,7 +33,7 @@ void chi(UINT64 *A);
 void iota(UINT64 *A, unsigned int indexRound);
 */
 
-#if (PLATFORM_BYTE_ORDER != IS_LITTLE_ENDIAN)
+#if ENDIANNESS_BE
 static void fromBytesToWords(UINT64 *stateAsWords, const unsigned char *state)
 {
     unsigned int i, j;
@@ -147,11 +147,11 @@ void KeccakPermutationOnWords(UINT64 *state)
 
 void KeccakPermutation(unsigned char *state)
 {
-#if (PLATFORM_BYTE_ORDER != IS_LITTLE_ENDIAN)
+#if ENDIANNESS_BE
     UINT64 stateAsWords[KeccakPermutationSize/64];
 #endif
 
-#if (PLATFORM_BYTE_ORDER == IS_LITTLE_ENDIAN)
+#if ENDIANNESS_LE
     KeccakPermutationOnWords((UINT64*)state);
 #else
     fromBytesToWords(stateAsWords, state);
