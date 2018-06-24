@@ -2,7 +2,7 @@
 
 Download FTDI Windows Drivers from [FTDI D2XX Drivers page](http://www.ftdichip.com/Drivers/D2XX.htm).
 
-For the latest CDM v2.12.28 WHQL Cerfitied driver:
+For the latest CDM v2.12.28 WHQL Certified driver:
 
 * Copy all the contents in `i386/` folder
 * Copy `ftd2xx.h`
