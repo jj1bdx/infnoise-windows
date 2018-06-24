@@ -10,3 +10,7 @@ See https://github.com/13-37-org/infnoise for the original contents.
 ## Notes
 
 * The executable is for Win32 only (due to FTDI library issue)
+
+## LICENSE
+
+[Unlicense](http://unlicense.org/), equivalent to the public domain
