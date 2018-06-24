@@ -166,6 +166,12 @@
     <ClInclude Include="..\..\Keccak\brg_endian.h" />
     <ClInclude Include="..\..\Keccak\KeccakF-1600-interface.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\Original-README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\README.md" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

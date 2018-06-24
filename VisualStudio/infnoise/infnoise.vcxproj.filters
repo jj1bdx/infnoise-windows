@@ -39,4 +39,10 @@
   <ItemGroup>
     <Library Include="..\ftdi\ftd2xx.lib" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\Original-README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\README.md" />
+  </ItemGroup>
 </Project>
