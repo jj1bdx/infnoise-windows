@@ -77,7 +77,7 @@ static uint32_t extractBytes(uint8_t *bytes, uint8_t *inBuf, bool raw) {
             // This is a good place to feed the bit from the INM to the health checker.
             uint8_t addr = extractAddress(val);
             //printf("Address: %u, adding evenBit:%u oddBit:%u even:%u\n", addr, evenBit, oddBit, even);
-            if(!inmHealthCheckAddBit(evenBit, oddBit, even, addr)) {
+            if(!inmHealthCheckAddBit(evenBit, oddBit, even)) {
                 fputs("Health check of Infinite Noise Multiplier failed!\n", stderr);
                 exit(1);
             }

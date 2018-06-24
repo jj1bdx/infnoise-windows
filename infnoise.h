@@ -27,9 +27,17 @@
 #define SWEN1 2u
 #define SWEN2 0u
 
+// See https://github.com/waywardgeek/infnoise/issues/59
+// The remaining 8 bits are driven with 0 .. 15 to help track the cause of misfires
+#define ADDR0 3u
+#define ADDR1 5u
+#define ADDR2 6u
+#define ADDR3 7u
+
 // All data bus bits of the FT240X are outputs, except COMP1 and COMP2
 #define MASK (0xffu & ~(1u << COMP1) & ~(1u << COMP2))
 
+#if 0 // this struct is unused
 // Structure for parsed command line options
 struct opt_struct {
 	uint32_t outputMultiplier; // We output all the entropy when outputMultiplier == 0
@@ -45,8 +53,9 @@ struct opt_struct {
 	char *pidFileName;	// Name of optional PID-file
 	char *serial;		// Name of selected device
 };
+#endif 
 
-bool inmHealthCheckStart(uint8_t N, double K, struct opt_struct *opts);
+bool inmHealthCheckStart(uint8_t N, double K, bool debug);
 void inmHealthCheckStop(void);
 bool inmHealthCheckAddBit(bool evenBit, bool oddBit, bool even);
 bool inmHealthCheckOkToUseData(void);
@@ -55,11 +64,6 @@ double inmHealthCheckEstimateEntropyPerBit(void);
 uint32_t inmGetEntropyLevel(void);
 void inmClearEntropyLevel(void);
 bool inmEntropyOnTarget(uint32_t entropy, uint32_t bits);
-void inmWriteEntropyStart(uint32_t bufLen, struct opt_struct *opts);
-void inmWriteEntropyToPool(uint8_t *bytes, uint32_t length, uint32_t entropy);
-void inmWaitForPoolToHaveRoom(void);
 void inmDumpStats(void);
-void startDaemon(struct opt_struct *opts);
-bool isSuperUser(void);
 
 extern double inmK, inmExpectedEntropyPerBit;
