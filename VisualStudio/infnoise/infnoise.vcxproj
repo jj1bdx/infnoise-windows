@@ -159,12 +159,12 @@
   <ItemGroup>
     <ClCompile Include="..\..\healthcheck.c" />
     <ClCompile Include="..\..\infnoise_win.c" />
-    <ClCompile Include="..\..\Keccak\KeccakF-1600-reference.c" />
+    <ClCompile Include="..\..\KeccakF-1600-reference.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\infnoise.h" />
-    <ClInclude Include="..\..\Keccak\endianness.h" />
-    <ClInclude Include="..\..\Keccak\KeccakF-1600-interface.h" />
+    <ClInclude Include="..\..\endianness.h" />
+    <ClInclude Include="..\..\infnoise_win.h" />
+    <ClInclude Include="..\..\KeccakF-1600-interface.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\Original-README.txt" />

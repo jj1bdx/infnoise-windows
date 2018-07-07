@@ -18,21 +18,21 @@
     <ClCompile Include="..\..\healthcheck.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Keccak\KeccakF-1600-reference.c">
+    <ClCompile Include="..\..\infnoise_win.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\infnoise_win.c">
+    <ClCompile Include="..\..\KeccakF-1600-reference.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Keccak\KeccakF-1600-interface.h">
+    <ClInclude Include="..\..\endianness.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\infnoise.h">
+    <ClInclude Include="..\..\KeccakF-1600-interface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Keccak\endianness.h">
+    <ClInclude Include="..\..\infnoise_win.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
