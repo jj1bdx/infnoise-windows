@@ -9,7 +9,7 @@ See https://github.com/13-37-org/infnoise for the original contents.
 
 ## Notes
 
-* The executable is for Win32 only (due to FTDI library issue)
+* The executable is for Win64 only
 
 ## LICENSE
 

@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="FTDI Libraries">
+      <UniqueIdentifier>{92d858ca-f62c-4035-b874-4391ac4a3de8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\healthcheck.c">
@@ -35,14 +38,22 @@
     <ClInclude Include="..\..\infnoise_win.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="..\ftdi\ftd2xx.lib" />
+    <ClInclude Include="..\ftdi\ftd2xx.h">
+      <Filter>FTDI Libraries</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\Original-README.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
+    <None Include="..\ftdi\README.md">
+      <Filter>FTDI Libraries</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\ftdi\ftd2xx.lib">
+      <Filter>FTDI Libraries</Filter>
+    </Library>
   </ItemGroup>
 </Project>

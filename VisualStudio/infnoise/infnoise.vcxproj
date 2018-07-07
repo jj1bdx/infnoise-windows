@@ -165,12 +165,14 @@
     <ClInclude Include="..\..\endianness.h" />
     <ClInclude Include="..\..\infnoise_win.h" />
     <ClInclude Include="..\..\KeccakF-1600-interface.h" />
+    <ClInclude Include="..\ftdi\ftd2xx.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\Original-README.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
+    <None Include="..\ftdi\README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

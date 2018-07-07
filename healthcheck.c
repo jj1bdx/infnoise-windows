@@ -101,10 +101,10 @@ bool inmHealthCheckStart(uint8_t N, double K, bool debug) {
     inmK = K;
     inmN = N;
     inmPrevBits = 0u;
-    inmOnesEven = calloc(1u << N, sizeof(uint32_t));
-    inmZerosEven = calloc(1u << N, sizeof(uint32_t));
-    inmOnesOdd = calloc(1u << N, sizeof(uint32_t));
-    inmZerosOdd = calloc(1u << N, sizeof(uint32_t));
+    inmOnesEven = calloc((size_t)1u << N, sizeof(uint32_t));
+    inmZerosEven = calloc((size_t)1u << N, sizeof(uint32_t));
+    inmOnesOdd = calloc((size_t)1u << N, sizeof(uint32_t));
+    inmZerosOdd = calloc((size_t)1u << N, sizeof(uint32_t));
     inmExpectedEntropyPerBit = log(K) / log(2.0);
     inmTotalBits = 0u;
     inmPrevBit = false;
